@@ -7,11 +7,13 @@ import Footer from "./components/Footer/Footer";
 import Content from "./components/Content/Content";
 import Video from "./components/Video/Video";
 import Links from "./components/Links/Links";
+import IntroModal from "./components/Modal/Modal";
 
 import "./App.css";
 
 const App = () => {
   const [results, setResults] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const handleCalculate = ({ tentWidth, tentLength, potDiameter }) => {
     const maxPots =
@@ -22,6 +24,10 @@ const App = () => {
 
   return (
     <div className="App">
+      <IntroModal
+        isOpen={isModalOpen}
+        onRequestClose={() => setIsModalOpen(false)}
+      />
       <h1>Indoor planner</h1>
       <div className="mainContainer">
         <div className="sectionContainer">
