@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import imgSmallPot from "../../assets/maceta1.png";
 import img from "../../assets/maceta2.png";
 import styles from "./Results.module.css";
 
@@ -42,7 +43,7 @@ const Results = ({ tentWidth, potDiameter, maxPots }) => {
               }}
             >
               <img
-                src="../../../public/maceta1.png"
+                src={imgSmallPot}
                 alt="Pot"
                 style={{
                   width: "100%",
